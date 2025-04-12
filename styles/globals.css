@@ -1,8 +1,46 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* styles/globals.css */
 
 body {
-  @apply bg-gray-900 text-white;
-  font-family: 'Arial', sans-serif;
-}
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0f0f0f;
+    color: #f0f0f0;
+  }
+  
+  a {
+    color: #00ffd5;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: #ff00cc;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  h1, h2, h3 {
+    color: #00ffd5;
+  }
+  
+  button {
+    background: linear-gradient(45deg, #ff00cc, #00ffd5);
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    margin: 1rem 0;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+  }
+  
