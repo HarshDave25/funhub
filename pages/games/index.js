@@ -27,7 +27,7 @@ export default function Home() {
           </div>
           
           <div className="game-card">
-            <img src="/images/trivia-preview.png" alt="Trivia Quiz" />
+            {/* <img src="/images/trivia-preview.png" alt="Trivia Quiz" /> */}
             <h3>Trivia Quiz</h3>
             <p>Test your knowledge with fun trivia questions!</p>
             <Link href="/trivia">
