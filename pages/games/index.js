@@ -3,24 +3,41 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="container">
-      <h1>🎮 Welcome to FunHub!</h1>
-      <p>Your ultimate fun zone for quick games & trivia.</p>
+    <>
+      <header className="navbar">
+        <h1>FunHub</h1>
+        <nav>
+          <Link href="/">Home</Link>
+          <Link href="/games/tictactoe">Games</Link>
+          <Link href="/trivia">Trivia</Link>
+        </nav>
+      </header>
+      
+      <div className="container">
+        <h2>🚀 Explore Games</h2>
 
-      <h2>🚀 Explore Games</h2>
-      <ul>
-        <li><Link href="/games/tictactoe">Tic Tac Toe (2-Player)</Link></li>
-        <li><Link href="/trivia">Trivia Quiz</Link></li>
-        {/* Add more games as you finish them */}
-      </ul>
-
-      <Link href="/games/tictactoe">
-        <button>Play Tic Tac Toe</button>
-      </Link>
-
-      <Link href="/trivia">
-        <button>Start Trivia Quiz</button>
-      </Link>
-    </div>
+        <div className="game-card-container">
+          <div className="game-card">
+            <img src="/images/tictactoe-preview.png" alt="Tic Tac Toe" />
+            <h3>Tic Tac Toe (2-Player)</h3>
+            <p>Challenge your friend in a classic Tic Tac Toe game.</p>
+            <Link href="/games/tictactoe">
+              <button>Play Now</button>
+            </Link>
+          </div>
+          
+          <div className="game-card">
+            <img src="/images/trivia-preview.png" alt="Trivia Quiz" />
+            <h3>Trivia Quiz</h3>
+            <p>Test your knowledge with fun trivia questions!</p>
+            <Link href="/trivia">
+              <button>Start Trivia</button>
+            </Link>
+          </div>
+          
+          {/* Add more games here */}
+        </div>
+      </div>
+    </>
   );
 }
